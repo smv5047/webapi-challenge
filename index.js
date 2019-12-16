@@ -22,7 +22,7 @@ app.listen(port, host, () => {
 })
 
 app.use('/api/projects', projectRoutes)
-app.use('/api/projects/:id/actions', actionRoutes)
+app.use('/api/projects', actionRoutes)
 
 app.use((err, req, res, next) => {
     console.log(err);
