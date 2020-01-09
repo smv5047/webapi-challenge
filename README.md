@@ -16,16 +16,16 @@ The Minimum Viable Product must be completed in three hours.
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your _Team Lead_ as collaborator on Github.
-- [ ] Clone your forked version of the Repository.
-- [ ] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
-- [ ] Implement the project on this Branch, committing changes regularly.
-- [ ] Push commits: git push origin `firstName-lastName`.
+- [X] Create a forked copy of this project.
+- [X] Add your _Team Lead_ as collaborator on Github.
+- [X] Clone your forked version of the Repository.
+- [X] Create a new Branch on the clone: git checkout -b `firstName-lastName`.
+- [X] Implement the project on this Branch, committing changes regularly.
+- [X] Push commits: git push origin `firstName-lastName`.
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge `firstName-lastName` Branch into master on **your fork, don't make Pull Requests against Lambda's repository**.
+- [X] Submit a Pull-Request to merge `firstName-lastName` Branch into master on **your fork, don't make Pull Requests against Lambda's repository**.
 - [ ] Please don't merge your own pull request.
 - [ ] Add your _Team Lead_ as a Reviewer on the Pull-request
 - [ ] Your _Team Lead_ will count the challenge as done by merging the branch into _master_.
@@ -38,25 +38,38 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
-- [ ] Mention two parts of Express that you learned about this week.
+- [X] Mention two parts of Express that you learned about this week.
+    
+    - That Express sits on top of Node and adds routing and middleware
+    - We learned about creating end points with express. These endpoints allow us to setup up responses to requests from the front end.
+    - We also learned about the 3 ways that a client can interact with an endpoint. Query strings, Request body, and route parameters. Query strings transmit information to the endpoints through the url. Request body is through the JSON object sent along with the request. Route parameters are based of of the ID that is included within the URL
 
-- [ ] Describe Middleware?
+- [X] Describe Middleware?
 
-- [ ] Describe a Resource?
+    A function or group of functions that can be performed on each call to an endpoint. Middleware can make changes to the res or req object. It can also log out error or information about the endpoint call. Also it can call additional middleware.
 
-- [ ] What can the API return to help clients know if a request was successful?
 
-- [ ] How can we partition our application into sub-applications?
+- [X] Describe a Resource?
+
+    - A resource is a category of pertinent information for your server, such as a user or a post. It is advised to split up the structure of your server based on resources.
+
+- [X] What can the API return to help clients know if a request was successful?
+
+    A status code starting with 2, such as 200 or 201.
+
+- [X] How can we partition our application into sub-applications?
+
+    We can use the built-in express router to organize our back-end based on resources. So we can have a separate files, and set of end points for each resource. For example we could have a set of endpoints for users that would have full CRUD . This is similar to the approach in React of creating a modular application.
 
 ## Minimum Viable Product
 
-- [ ] Configure an _npm script_ named _"server"_ that will execute your code using _nodemon_. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
-- [ ] Configure an _npm script_ named _"start"_ that will execute your code using _node_.
+- [X] Configure an _npm script_ named _"server"_ that will execute your code using _nodemon_. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
+- [X] Configure an _npm script_ named _"start"_ that will execute your code using _node_.
 
 Design and build the necessary endpoints to:
 
-- [ ] Perform CRUD operations on _projects_ and _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
-- [ ] Retrieve the list of actions for a project.
+- [X] Perform CRUD operations on _projects_ and _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
+- [X] Retrieve the list of actions for a project.
 
 Please read the following sections before implementing the Minimum Viable Product, they describe how the database is structured and the files and methods available for interacting with the data.
 
@@ -97,6 +110,23 @@ The `/data/helpers` folder includes files you can use to manage the persistence 
 The `projectModel.js` helper includes an extra method called `getProjectActions()` that takes a _project id_ as it's only argument and returns a list of all the _actions_ for the _project_.
 
 We have provided test data for all the resources.
+
+## Project Tracker
+
+Projects
+
+C - X
+R - X
+U - X
+D - X
+
+Actions
+
+C - X
+R - X
+U - X
+D - X
+
 
 ## Stretch Goal
 
